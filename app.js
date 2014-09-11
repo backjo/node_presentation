@@ -8,8 +8,10 @@ app.get('/user', function(req, res) {
 });
 
 app.get('/', function(req, res) {
-
+  res.send('<html><body><p>hi</p></body></html>');
 });
+
+//Unit tests
 
 app.listen('3000', function(err) {
   request(app)
@@ -21,4 +23,4 @@ app.listen('3000', function(err) {
       res.body.should.have.property("name", "tobi");
     })
 });
-//Unit tests
+
